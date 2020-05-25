@@ -1,13 +1,12 @@
-{% extends 'academia/base.html' %}
-
+{% extends 'courses/index.html' %}
 {% block content %}
-    <h1>Lesson Detail View</h1>
+    <h2 align="center">{{ object.title }}</h2>
     {% if object is not None %}
-        {{ object.title }}
-        {{ object.description }}
+        <p align="center">
+            <iframe src="https://player.vimeo.com/video/{{ object.video_url }}" width="640" height="360" frameborder="0" title="" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </p>
     {% else %}
-        <h3>Upgrade your membership</h3>
+        <h3>Compra este modulo y accede al contenido!</h3>
 
     {% endif %}
 {% endblock %}
-s

@@ -1,0 +1,9 @@
+{% extends "courses/base.html" %}
+{% block content %}
+<h2>Has cerrado tu sesión.</h2>
+        <div class="border-top pt-3">
+                <small class="text-muted">
+                    <a href="{% url 'login' %}">Ingresar nuevamente</a>
+                </small>
+        </div>
+{% endblock content %}
