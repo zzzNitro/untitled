@@ -47,7 +47,7 @@ class Lesson(models.Model):
     course = models.ForeignKey(Course, on_delete=models.SET_NULL, null=True)
     position = models.IntegerField()
     video_url = models.CharField(max_length=200)
-    #dl_content = THIS WILL BE THE DOWNLOADABLE CONTENTS AVAILABLE FOR EACH LESSON
+    dl_content = models.FileField(blank=True, null=True, upload_to='dlc/{course}/')
 
     def __str__(self):
         return self.title
