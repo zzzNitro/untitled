@@ -47,7 +47,6 @@ class Lesson(models.Model):
     course = models.ForeignKey(Course, on_delete=models.SET_NULL, null=True)
     position = models.IntegerField()
     video_url = models.CharField(max_length=200)
-    dl_content = models.FileField(blank=True, null=True, upload_to='dlc/{course}/')
 
     def __str__(self):
         return self.title
@@ -58,3 +57,6 @@ class Lesson(models.Model):
                            'course_slug': self.course.slug,
                            'lesson_slug': self.slug
                        })
+
+
+

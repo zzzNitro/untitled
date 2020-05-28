@@ -5,11 +5,7 @@
         <p align="center">
             <iframe src="https://player.vimeo.com/video/{{ object.video_url }}" width="640" height="360" frameborder="0" title="" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </p>
-                {% for dl_content in object.dl_contents %}
-                    <p>
-                        <a href="{{ lesson.dl_content.url }}" class="btn btn-default navbar-btn" >DLC</a>
-                    </p>
-                {% endfor %}
+
     {% else %}
         <h3>Compra este modulo y accede al contenido!</h3>
 
