@@ -3,7 +3,6 @@ from django.views.generic import ListView, DetailView, View
 from .models import Course, Lesson
 from django.http import HttpResponse
 from django.views.decorators.clickjacking import xframe_options_exempt
-# Create your views here.
 
 
 def home(request):

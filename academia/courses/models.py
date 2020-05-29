@@ -3,7 +3,6 @@ from django.urls import reverse
 from PIL import Image
 import vimeo
 
-# Create your models here.
 
 v_client = vimeo.VimeoClient(
   token='30eb0a94af53902b7ff23cef49cababe',
@@ -47,7 +46,7 @@ class Lesson(models.Model):
     course = models.ForeignKey(Course, on_delete=models.SET_NULL, null=True)
     position = models.IntegerField()
     video_id = models.CharField(max_length=200)
-    file = models.FileField(blank=True, null=True, upload_to='dlc/')
+#    file = models.FileField(blank=True)
 
     def __str__(self):
         return self.title
