@@ -23,7 +23,7 @@ class CourseDetailView(DetailView):
 
 class LessonDetailView(View):
 
-    def get(self, request, course_slug, lesson_slug, dlc_position, *args, **kwargs):
+    def get(self, request, course_slug, lesson_slug, *args, **kwargs):
 
         course_qs = Course.objects.filter(slug=course_slug)
         if course_qs.exists():

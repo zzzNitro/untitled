@@ -46,7 +46,8 @@ class Lesson(models.Model):
     title = models.CharField(max_length=120)
     course = models.ForeignKey(Course, on_delete=models.SET_NULL, null=True)
     position = models.IntegerField()
-    video_url = models.CharField(max_length=200)
+    video_id = models.CharField(max_length=200)
+    file = models.FileField(blank=True, null=True, upload_to='dlc/')
 
     def __str__(self):
         return self.title
@@ -59,4 +60,12 @@ class Lesson(models.Model):
                        })
 
 
+class Resource(models.Model):
+    lesson = models.ForeignKey(Lesson, default=None, on_delete=models.CASCADE)
+    title = models.CharField(max_length=75, blank=True, null=True)
+    position = models.IntegerField()
+    files = models.FileField(upload_to='dlc/')
+
+    def __str__(self):
+        return self.lesson.title
 

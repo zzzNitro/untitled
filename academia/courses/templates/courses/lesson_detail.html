@@ -3,7 +3,7 @@
     <h2 align="center">{{ object.title }}</h2>
     {% if object is not None %}
         <p align="center">
-            <iframe src="https://player.vimeo.com/video/{{ object.video_url }}" width="640" height="360" frameborder="0" title="" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/{{ object.video_id }}" width="640" height="360" frameborder="0" title="" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </p>
 
     {% else %}
